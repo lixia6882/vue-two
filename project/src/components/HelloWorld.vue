@@ -86,9 +86,9 @@
     		</div>
     		<div class="footer_number">
     			<ul>
-    				<li v-for="name in rules.names">
-    					{{name}}
-    				</li>
+	    			<router-link v-for="name in rules.names" tag="li" to="">
+	    				{{name}}
+	    			</router-link>
     			</ul>
     			<div class="clearfix"></div>
     			<p>唯开乐学（北京）教育科技有限公司 版权所有</p>
@@ -113,6 +113,8 @@ export default {
 	    }
   	}
   }
+  
+  
 }
 </script>
 
