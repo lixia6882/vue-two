@@ -15,15 +15,14 @@ export default {
   data () {
   	return {
 	    rules:{
-	    	items: ['主页','老师任务','学霸闯关','','优选课程','乐学商城','','王小妹','退出'], 
-	        names:["联系我们",'加入我们','线下学校']
+	    	items: ['主页','老师任务','学霸闯关','','优选课程','乐学商城','','王小妹','退出']
 	    }
   	}
   }
 }
 </script>
 
-<style>
+<style lang="scss">
    .header{
    	width: 100%;
    	height: 110px;
