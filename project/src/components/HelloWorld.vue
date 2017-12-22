@@ -1,14 +1,15 @@
 <template>
   <div class="hello" id="hello">
-    <div class="header">
+  	<header></header>
+    <!--<div class="header">
     	<div class="header_list">
     		<ul class="ul">
-    			<router-link v-for="item in rules.items" tag="li" to="">
+    			<router-link v-for="item in rules.items" tag="li" to="/hello">
     				{{item}}
     			</router-link>
     		</ul>
     	</div>
-    </div>
+    </div>-->
     <div class="main">
     	<div class="main_left">
     		<div class="left_title">
@@ -30,8 +31,8 @@
     		<div class="clearfix"></div>
     	  <ul class="left_ul">
     	  	<li>
-    	  		<img src="../assets/student/student/img1.png" style="padding-left: 33px;"/>
-    	  		<span style="padding-right: 10px;">排名：13</span>
+    	  		<img src="../assets/student/student/img1.png" v-bind:style="{ paddingLeft:paddingLeft + 'px'  }"/>
+    	  		<span v-bind:style="{ paddingRight:paddingRight + 'px'  }">排名：13</span>
     	  		<img src="../assets/student/student/up.png"/>
     	  		<img src="../assets/student/student/down.png"/>
     	  	</li>
@@ -104,20 +105,31 @@
 </template>
 
 <script>
+import header from './header.vue'
 export default {
   data () {
   	return {
 	    rules:{
 	    	items: ['主页','老师任务','学霸闯关','','优选课程','乐学商城','','王小妹','退出'], 
 	      names:["联系我们",'加入我们','线下学校']
-	    }
+	    },
+	    paddingLeft:33,
+	    paddingRight:10
   	}
-  }
-  
-  
+  },
+  mounted:function(){
+  	this.cartView();
+  },
+  methods:{
+  	cartView:function(){
+  		this.$http.get("src/data/hello.json").then(res=>{
+  			console.log(res.data);
+  		});
+  	}
+  },
+  component: {header}
 }
 </script>
-
 
 <style lang="scss">
 	 .hello{
