@@ -1,15 +1,6 @@
 <template>
   <div class="hello" id="hello">
   	<Header></Header>
-    <!--<div class="header">
-    	<div class="header_list">
-    		<ul class="ul">
-    			<router-link v-for="item in rules.items" tag="li" to="/hello">
-    				{{item}}
-    			</router-link>
-    		</ul>
-    	</div>
-    </div>-->
     <div class="main">
     	<div class="main_left">
     		<div class="left_title">
@@ -81,39 +72,15 @@
     	</div>
     </div>
     <Footer></Footer>
-    <!--<div class="footer">
-    	<nav class="footer_nav">
-    		<div class="footer_number">
-    			<img src="../assets/student/student/tel.png" />
-    		</div>
-    		<div class="footer_number">
-    			<ul>
-	    			<router-link v-for="name in rules.names" tag="li" to="">
-	    				{{name}}
-	    			</router-link>
-    			</ul>
-    			<div class="clearfix"></div>
-    			<p>唯开乐学（北京）教育科技有限公司 版权所有</p>
-    			<p>WeikaiLeXue(Beijing)Educatio Technology Company,Ltd.All Rights</p>
-    		</div>
-    		<div class="footer_number footer_last">
-    			<p>关注我们</p>
-    				<img src="../assets/common/erweima.png" />
-    		</div>
-    	</nav>
-    </div>-->
   </div>
 </template>
 
 <script>
 import Header from './Header.vue'
-import Footer form './Footer.vue'
+import Footer from './Footer.vue'
 export default {
   data () {
   	return {
-	    rules:{
-	      names:["联系我们",'加入我们','线下学校']
-	    },
 	    paddingLeft:33,
 	    paddingRight:10
   	}
